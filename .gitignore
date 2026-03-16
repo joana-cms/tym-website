@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+dist/
+.env
+*.log
+.gemini/
+scripts/
+v0/
+tmp/
+brain/
+*.webp
+*.png
+!assets/*.png
