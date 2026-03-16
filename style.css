@@ -39,6 +39,10 @@ h1, h2, h3 {
     padding: 0 2rem;
 }
 
+.small-container {
+    max-width: 700px;
+}
+
 /* Custom Cursor */
 #custom-cursor {
     width: 20px;
@@ -596,4 +600,73 @@ h2 {
     .nav-links {
         display: none;
     }
+}
+
+/* Contact Form */
+.form-wrapper {
+    background: white;
+    padding: 4rem;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.05);
+    border-radius: 2px;
+    margin-top: 3rem;
+}
+
+.input-group {
+    margin-bottom: 2rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #eee;
+    background: #fcfcfc;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background: white;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+}
+
+.full-width {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.poetic-sub {
+    font-style: italic;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-page .navbar.scrolled {
+    background: white;
 }

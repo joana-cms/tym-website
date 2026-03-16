@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Escritura do Desejo | Contato</title>
+    <meta name="description" content="Envie uma mensagem para iniciarmos uma jornada de cura ou construção digital.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="contact-page">
+    <div id="custom-cursor"></div>
+
+    <nav class="navbar scrolled">
+        <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">TYM<span>.</span></a></div>
+        <ul class="nav-links">
+            <li><a href="../index.html#sobre">A Origem</a></li>
+            <li><a href="../index.html#dualidade">O Código e o Corpo</a></li>
+            <li><a href="../index.html#servicos-digitais">Casas de Luz</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <a href="index.html" class="active">PT</a>
+            <!-- Links for EN/DE versions can be added here -->
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container small-container">
+            <div class="section-header align-center reveal">
+                <span class="subtitle">O Encontro</span>
+                <h2>Para onde vão as palavras?</h2>
+                <p class="poetic-sub">Há mensagens que são garrafas lançadas ao mar e outras que são sementes. Deixa aqui a tua, para que possamos tecer um novo caminho juntos.</p>
+            </div>
+
+            <div class="form-wrapper reveal-up">
+                <!-- Automação via Formspree -->
+                <form action="https://formspree.io/f/xoqgrqwv" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <label for="name">Como te chamas?</label>
+                        <input type="text" id="name" name="name" placeholder="Teu nome completo" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Onde te encontro?</label>
+                        <input type="email" id="email" name="email" placeholder="Teu melhor e-mail" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="service">O que procuras?</label>
+                        <select id="service" name="service">
+                            <option value="thai-massage">Uma sessão de Thai Yoga Massage</option>
+                            <option value="website">Uma Casa de Luz (Website)</option>
+                            <option value="outro">Outro assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Escreve a tua história...</label>
+                        <textarea id="message" name="message" rows="6" placeholder="O que o teu corpo ou o teu projeto sussurram hoje?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary full-width">Lançar a Semente</button>
+                    <p class="form-note">Ao clicares, os teus dados viajam de forma segura. Não uso redes sociais, mas respondo a cada e-mail com a atenção que o silêncio exige.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container align-center">
+            <p>&copy; 2024 Thai Yoga Massage & Arquitetura Digital. Feito com intenção.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
