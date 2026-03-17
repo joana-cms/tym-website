@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joana Clarinha | Termin buchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .booking-container {
+            max-width: 900px;
+            margin: 120px auto;
+            padding: 4rem;
+            background: white;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .calendar-day {
+            padding: 1.5rem 0.5rem;
+            border: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .calendar-day:hover:not(.empty) {
+            background: var(--accent);
+            border-color: var(--primary);
+        }
+
+        .calendar-day.selected {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .calendar-day.empty {
+            border: none;
+            cursor: default;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 15px;
+            margin-top: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s;
+        }
+
+        .time-slots.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .time-slot {
+            padding: 1rem;
+            border: 1px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .time-slot:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .time-slot.selected {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .confirm-booking {
+            margin-top: 4rem;
+            display: none;
+        }
+
+        .confirm-booking.active {
+            display: block;
+            animation: fadeIn 0.8s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+        }
+
+        .weekday-labels {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-bottom: 0.5rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar scrolled">
+        <div class="logo">Joana Clarinha<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="de.html">Startseite</a></li>
+            <li><a href="de.html#sobre">Über mich</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="booking-container reveal active">
+            <span class="subtitle">Terminbuchung</span>
+            <h2>Wählen Sie den besten Zeitpunkt</h2>
+            <p>Online-Entdeckungssitzung — 30 Minuten</p>
+
+            <div style="margin-top: 4rem;">
+                <div class="calendar-header">
+                    <span>März 2024</span>
+                </div>
+                <div class="weekday-labels">
+                    <span>Mon</span><span>Die</span><span>Mit</span><span>Don</span><span>Fre</span><span>Sam</span><span>Son</span>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Javascript will populate this -->
+                </div>
+            </div>
+
+            <div class="time-slots" id="timeSlots">
+                <!-- Javascript will populate this -->
+            </div>
+
+            <div class="confirm-booking" id="confirmSection">
+                <button class="btn btn-primary" id="finalConfirm">Termin bestätigen</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const calendarGrid = document.getElementById('calendarGrid');
+        const timeSlots = document.getElementById('timeSlots');
+        const confirmSection = document.getElementById('confirmSection');
+        let selectedDate = null;
+        let selectedTime = null;
+
+        const daysInMonth = 31;
+        const startDay = 4; // Freitag in 2024
+
+        for (let i = 0; i < startDay; i++) {
+            const empty = document.createElement('div');
+            empty.className = 'calendar-day empty';
+            calendarGrid.appendChild(empty);
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayEl = document.createElement('div');
+            dayEl.className = 'calendar-day';
+            dayEl.textContent = day;
+            
+            dayEl.onclick = () => {
+                document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+                dayEl.classList.add('selected');
+                selectedDate = day;
+                showTimes();
+            };
+            calendarGrid.appendChild(dayEl);
+        }
+
+        function showTimes() {
+            timeSlots.innerHTML = '';
+            timeSlots.classList.add('active');
+            confirmSection.classList.remove('active');
+            
+            const hours = [];
+            for (let h = 8; h <= 20; h++) {
+                hours.push(`${h.toString().padStart(2, '0')}:00`);
+                if (h < 20) hours.push(`${h.toString().padStart(2, '0')}:30`);
+            }
+            
+            hours.forEach(time => {
+                const slot = document.createElement('div');
+                slot.className = 'time-slot';
+                slot.textContent = time;
+                slot.onclick = () => {
+                    document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                    slot.classList.add('selected');
+                    selectedTime = time;
+                    confirmSection.classList.add('active');
+                };
+                timeSlots.appendChild(slot);
+            });
+        }
+
+        document.getElementById('finalConfirm').onclick = () => {
+            alert(`Termin erfolgreich für den ${selectedDate}. März um ${selectedTime} gebucht.\nSie erhalten in Kürze den Link für den Videoanruf.`);
+            window.location.href = 'de.html';
+        };
+    </script>
+</body>
+
+</html>

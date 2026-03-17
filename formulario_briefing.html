@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing Digital | Joana Clarinha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d4a3e;
+            /* Esmeralda Profundo */
+            --accent: #f8f5f1;
+            /* Creme/Terra */
+            --text: #333;
+            --muted: #777;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 10mm auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin-top: 2rem;
+            font-size: 1.3rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .field {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 0.3rem;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            padding: 0.5rem 0;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 1rem;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .option input {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        .prompt-box {
+            background-color: var(--accent);
+            padding: 1.5rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--muted);
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                border: none;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">Guardar como PDF / Imprimir</button>
+
+    <div class="page">
+        <header>
+            <div class="logo">Joana Clarinha<span>.</span></div>
+            <h1>Briefing Digital</h1>
+        </header>
+
+        <section class="info-grid">
+            <div class="field">
+                <label>Cliente / Projeto</label>
+                <input type="text" placeholder="Nome do terapeuta ou projeto">
+            </div>
+            <div class="field">
+                <label>Data da Sessão</label>
+                <input type="text" placeholder="dd/mm/aaaa">
+            </div>
+        </section>
+
+        <section>
+            <h2>1. Identidade Visual (Tons e Mood)</h2>
+            <p style="font-size: 0.85rem; color: var(--muted);">Escolha a direção estética standard para o projeto.</p>
+
+            <div class="options-grid">
+                <div class="option"><input type="checkbox"> <span>Terra & Calma (Bege/Sage)</span></div>
+                <div class="option"><input type="checkbox"> <span>Esmeralda Profundo (Verde/Gold)</span></div>
+                <div class="option"><input type="checkbox"> <span>Ar & Espaço (Azul-Cinza/Branco)</span></div>
+                <div class="option"><input type="checkbox"> <span>Calathea (Roxo/Verde Floresta)</span></div>
+            </div>
+
+            <label>Mood Específico</label>
+            <div class="options-grid">
+                <div class="option"><input type="checkbox"> <span>Artesanal (Texturas)</span></div>
+                <div class="option"><input type="checkbox"> <span>Minimalista (Clean)</span></div>
+                <div class="option"><input type="checkbox"> <span>Ethereal (Luz/Sombra)</span></div>
+                <div class="option"><input type="checkbox"> <span>Custom (Especifique abaixo)</span></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Tom de Voz & Linguagem</h2>
+            <div class="options-grid">
+                <div class="option"><input type="checkbox"> <span>Poético / Evocativo</span></div>
+                <div class="option"><input type="checkbox"> <span>Prático / Direto</span></div>
+                <div class="option"><input type="checkbox"> <span>Comunitário / Par</span></div>
+            </div>
+            <label>Pessoa de Tratamento</label>
+            <div class="options-grid">
+                <div class="option"><input type="checkbox"> <span>Tu (2ª Pessoa)</span></div>
+                <div class="option"><input type="checkbox"> <span>Generalista (O Corpo)</span></div>
+                <div class="option"><input type="checkbox"> <span>Vós (Formal)</span></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Estrutura e Idiomas</h2>
+            <label>Idiomas Necessários</label>
+            <div class="options-grid">
+                <div class="option"><input type="checkbox"> <span>Português</span></div>
+                <div class="option"><input type="checkbox"> <span>English</span></div>
+                <div class="option"><input type="checkbox"> <span>Deutsch</span></div>
+                <div class="option"><input type="checkbox"> <span>Français / Outro</span></div>
+            </div>
+            <label>Formato do Site</label>
+            <div class="options-grid">
+                <div class="option"><input type="checkbox"> <span>Landing Page (Single Page)</span></div>
+                <div class="option"><input type="checkbox"> <span>Multipágina (Standard)</span></div>
+                <div class="option"><input type="checkbox"> <span>Agendamento Integrado</span></div>
+                <div class="option"><input type="checkbox"> <span>Custom Complex</span></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Notas da Sessão / Observações</h2>
+            <textarea rows="5"
+                placeholder="Visão do projeto, desafios principais, resistências ao digital..."></textarea>
+        </section>
+
+        <footer>
+            Joana Clarinha — Design que Respira | www.joanaclarinha.pt
+        </footer>
+    </div>
+
+</body>
+
+</html>

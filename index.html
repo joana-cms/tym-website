@@ -1,198 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Geografia do Toque e das Moradas Digitais</title>
-    <meta name="description" content="Um lugar onde o código tece casas e as mãos curam silêncios. Thai Yoga Massage e Arquitetura Digital para Terapeutas.">
+    <title>Joana | O Toque e o Ecrã</title>
+    <meta name="description"
+        content="Espaços de cura para o corpo e para a presença digital. Thai Yoga Massage e Websites para Terapeutas.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="custom-cursor"></div>
 
+<body>
     <nav class="navbar">
-        <div class="logo">TYM<span>.</span></div>
+        <div class="logo">Joana Clarinha<span>.</span></div>
         <ul class="nav-links">
-            <li><a href="#sobre">A Origem</a></li>
-            <li><a href="#dualidade">O Código e o Corpo</a></li>
-            <li><a href="#beneficios">O Peso que se Perde</a></li>
-            <li><a href="#servicos-digitais">Casas de Luz</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#corpo">Tratamentos</a></li>
+            <li><a href="#digital">Websites</a></li>
+            <li><a href="#contacto-corpo">Contacto</a></li>
         </ul>
         <div class="lang-switcher">
             <a href="index.html" class="active">PT</a>
             <a href="en.html">EN</a>
             <a href="de.html">DE</a>
         </div>
-        <button class="cta-nav" onclick="location.href='contato/index.html'">Agendar Agora</button>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <h1 class="reveal-text">A Escrita no Ar e na Pele</h1>
-            <p class="fade-in">Há pessoas que guardam mapas nos bolsos e outras que os têm escritos nos ossos. Aqui, construímos moradas para a alma e devolvemos ao corpo o balanço do mar.</p>
-            <div class="hero-btns">
-                <a href="contato/index.html" class="btn-primary">Folhear a História</a>
-                <a href="#beneficios" class="btn-secondary">Sentir o Ritmo</a>
+            <h1 class="reveal">Há corpos que pedem movimento antes de saberem.<br>E trabalhos que merecem ser vistos antes de serem procurados.<br><em>Entre os dois, eu habito.</em></h1>
+            <p class="reveal" style="transition-delay: 0.1s; max-width: 800px; margin: 1.5rem auto;">Através do toque, ajudo o corpo a recuperar espaço, respiração e presença. No digital, ajudo terapeutas a serem encontrados online com clareza e autenticidade.</p>
+            <div class="hero-btns reveal" style="transition-delay: 0.2s;">
+                <a href="massagem.html" class="btn btn-primary">Tratamentos</a>
+                <a href="websites.html" class="btn btn-secondary">Website & Consultoria</a>
             </div>
         </div>
-        <div class="hero-overlay"></div>
     </header>
 
-    <section id="sobre" class="section reveal">
+    <section id="sobre" class="section relational-intro reveal">
+        <div class="container">
+            <span class="subtitle">A Origem</span>
+            <div class="small-container" style="margin: 0 auto;">
+                <h2>Sobre mim</h2>
+                <p>Sempre gostei de movimento. De desporto, de explorar o corpo e descobrir o que realmente funciona. Foi através do yoga que descobri o Thai Yoga Massage, uma prática que combina toque, alongamentos e presença.</p>
+                <p>Com o tempo percebi que também podia ajudar terapeutas de outra forma: criando websites simples, claros e humanos, onde o trabalho pudesse ser visto e compreendido sem ruído técnico.</p>
+                <p>Hoje faço as duas coisas. Duas formas diferentes de criar ligação e expandir a presença de quem cuida dos outros.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="service-showcase">
+        <div id="corpo" class="service-box body reveal">
+            <span class="subtitle">Cuidado</span>
+            <h3>Tratamentos de Massagem</h3>
+            <p>O corpo acumula pressa, tensão e silêncio. Especializo-me em Thai Yoga Massage para libertar o que está preso e devolver amplitude.</p>
+            <p><strong>Recuperação & Escuta:</strong> Um trabalho sobre as dez linhas de energia para devolver ao corpo o seu ritmo natural.</p>
+            <a href="massagem.html" class="btn btn-primary">Explorar Abordagem</a>
+        </div>
+        <div id="digital" class="service-box digital reveal">
+            <span class="subtitle">Consultoria</span>
+            <h3>Criação de Websites</h3>
+            <p>Estratégias digitais para terapeutas que procuram diferenciação. Partindo de uma base de clareza, crio soluções flexíveis que respeitam a identidade de cada projeto.</p>
+            <ul>
+                <li><strong>Consultoria:</strong> Estrutura personalizada e estratégica.</li>
+                <li><strong>Diferenciação:</strong> Design que comunica a essência única.</li>
+            </ul>
+            <a href="websites.html" class="btn btn-secondary" style="border-color: white; color: white;">Como trabalho</a>
+        </div>
+    </section>
+
+    <section id="contacto-corpo" class="section contact-section reveal">
         <div class="container">
             <div class="section-grid">
-                <div class="section-image">
-                    <div class="personal-img-placeholder">
-                        <img src="assets/pattern.png" alt="A minha jornada" class="floating-img">
-                        <div class="img-caption">Tecendo linhas de código e linhas de energia.</div>
-                    </div>
-                </div>
                 <div class="section-text">
-                    <span class="subtitle">A Substância do Caminho</span>
-                    <h2>Onde se cruzam os caminhos</h2>
-                    <p>Desde pequena que o desporto foi o meu modo de ler o mundo. Não pela geometria fria do pódio, mas pela alegria desajeitada do movimento. Era o bem-estar que não precisava de explicação, como o riso de uma criança que descobre a gravidade.</p>
-                    <p>O tempo, esse bicho que nos obriga a estar quietos, sentou-me. Entre o estudo e a criação de arquiteturas invisíveis no ecrã, o meu corpo tornou-se uma estante de livros esquecidos: rígido, carregado de pó e de tensões. Faltava-me o ar que só o movimento sabe soprar.</p>
-                    <p>Encontrei o Yoga pela curiosidade da anatomia, e ele levou-me à <strong>Thai Yoga Massage</strong>. Foi como encontrar o guarda-chuva que tínhamos perdido numa tarde de chuva antiga.</p>
+                    <span class="subtitle">Marcação</span>
+                    <h2>Vamos recuperar espaço para respirar?</h2>
+                    <p>Conte o que o corpo pede neste momento. Responderei em breve por email ou telefone para agendarmos a sessão.</p>
+                </div>
+                <div class="form-container">
+                    <form id="form-massagem">
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" placeholder="Nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label>Email ou Telefone</label>
+                            <input type="email" placeholder="Para breve contacto">
+                        </div>
+                        <div class="form-group">
+                            <label>O que sente?</label>
+                            <textarea rows="3" placeholder="Tensões, cansaço, curiosidade..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">marcar sessão</button>
+                        <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.7;">Entrarei em contacto nas próximas 24h.</p>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="dualidade" class="section split-section">
-        <div class="split-left">
-            <div class="content">
-                <h3>O Arquiteto Digital</h3>
-                <p>Construir websites para terapeutas é como desenhar casas no éter. É dar ordem ao pensamento e criar um abrigo para quem tem o dom de cuidar dos outros.</p>
-            </div>
-        </div>
-        <div class="split-right">
-            <div class="content">
-                <h3>O Toque Silencioso</h3>
-                <p>A massagem é uma escuta. Quando as mãos tocam a pele, não tocam apenas músculos; tocam a memória do corpo, devolvendo às almas a agilidade de um cavalo livre.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="beneficios" class="section dark-bg">
-        <div class="container">
-            <div class="section-header align-center">
-                <span class="subtitle">Bem-Estar</span>
-                <h2>Benefícios Transformadores</h2>
-            </div>
-            <div class="cards-grid">
-                <div class="card reveal-up">
-                    <div class="card-icon">🧘‍♂️</div>
-                    <h3>Físico</h3>
-                    <p>Aumenta a flexibilidade, alivia tensões musculares crónicas, melhora a circulação e ajuda na desintoxicação natural do corpo.</p>
-                </div>
-                <div class="card reveal-up" style="transition-delay: 0.1s;">
-                    <div class="card-icon">✨</div>
-                    <h3>Mental</h3>
-                    <p>Reduz drasticamente o stress e a ansiedade, proporcionando uma clareza mental revigorante e paz interior.</p>
-                </div>
-                <div class="card reveal-up" style="transition-delay: 0.2s;">
-                    <div class="card-icon">🌊</div>
-                    <h3>Energético</h3>
-                    <p>Desbloqueia fluxos de energia (Prana) ao longo das linhas Sen, restaurando a vitalidade e o equilíbrio espiritual.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicos-digitais" class="section reveal">
+    <section id="contacto-digital" class="section reveal" style="background-color: white;">
         <div class="container">
             <div class="section-grid reverse">
                 <div class="section-text">
-                    <span class="subtitle">Arquitetura Digital</span>
-                    <h2>Casas de Luz para Curadores</h2>
-                    <p>Um website é mais do que código; é a porta de entrada para a sua energia. Crio moradas digitais para terapeutas, professores de yoga e buscadores de luz que precisam de um refúgio online tão autêntico quanto o seu toque.</p>
-                    <p>Espaços limpos, intuitivos e cheios de alma, desenhados para que a sua mensagem chegue a quem precisa dela, sem o ruído das redes sociais.</p>
-                </div>
-                <div class="section-image">
-                    <img src="assets/hero.png" alt="Moradas Digitais" class="floating-img" style="filter: brightness(0.8) sepia(0.2);">
-                </div>
-            </div>
-        </div>
-    </section>
+                    <span class="subtitle">Descoberta</span>
+                    <h2>Vamos dar fôlego à presença online?</h2>
+                    <p>Sei como é desafiante traduzir o trabalho terapêutico para o ecrã. Marca uma conversa de exploração (30 min) para perceber o teu trabalho, a tua intenção e como isso pode ganhar forma online.</p>
 
-    <section id="para-quem" class="section">
-        <div class="container">
-            <div class="para-quem-layout">
-                <div class="content">
-                    <span class="subtitle">Os Perdidos</span>
-                    <h2>Para quem guarda o cansaço nos ombros</h2>
-                    <p>Eu conheço o peso de carregar um mundo que não cabe nas mãos. Vivi a tensão que se instala como um estranho na nossa própria casa, a rigidez que nos faz esquecer que somos feitos de água e luz.</p>
-                    <p>Este lugar é para quem:</p>
-                    <ul class="custom-list">
-                        <li>Sente que o ecrã lhe roubou as pernas e a esperteza do corpo.</li>
-                        <li>Procura um tratamento que não teme o silêncio nem as regras do costume.</li>
-                        <li>É terapeuta e precisa de uma morada digital que tenha o calor do seu toque.</li>
-                        <li>Sabe que o bem-estar não se mede em likes, mas na profundidade do sono.</li>
-                    </ul>
                 </div>
-                <div class="image-wrapper reveal">
-                    <img src="assets/benefits.png" alt="O Peso que se Perde" class="glass-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="preparacao" class="section reveal">
-        <div class="container">
-            <div class="section-header align-center">
-                <span class="subtitle">O Ritual</span>
-                <h2>Preparar a Casa e o Espírito</h2>
-            </div>
-            <div class="section-grid">
-                <div class="section-text">
-                    <p>Para que o toque seja uma escrita limpa, o lugar deve ter o silêncio das árvores. Não usamos música com palavras, para que as histórias não se misturem; preferimos o som da água ou o canto dos pássaros que sabem o seu lugar no mundo.</p>
-                    <p>O corpo que recebe descansa sobre um solo firme, longe da brancura fria dos hospitais. O corpo que dá, por sua vez, deve ter as mãos limpas e o coração pronto, usando o toque como uma ferramenta de compaixão.</p>
-                    <ul class="custom-list">
-                        <li><strong>O Cenário:</strong> Ventilação, privacidade e o aroma suave do incenso.</li>
-                        <li><strong>O Traje:</strong> Roupas leves e soltas, para que o corpo recupere a sua agilidade.</li>
-                        <li><strong>A Intenção:</strong> Um encontro baseado na confiança, sem adornos ou relógios.</li>
-                    </ul>
-                </div>
-                <div class="section-image">
-                    <img src="assets/pattern.png" alt="O Ritual" class="floating-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="section dark-bg reveal">
-        <div class="container">
-            <div class="section-header align-center">
-                <span class="subtitle">A Ética do Cuidado</span>
-                <h2>Perguntas ao Corpo</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>O que devo dizer antes de começarmos?</h4>
-                    <p>O corpo tem segredos que precisam de ser partilhados: cirurgias antigas, o pulsar do coração, a pressão das veias ou se houver uma nova vida a crescer no ventre. A honestidade é o primeiro passo da cura.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Existem limites para o toque?</h4>
-                    <p>Nunca tocamos o osso ou a coluna com dureza. Respeitamos a fragilidade dos joelhos e a delicadeza do ventre, especialmente após os três meses de gravidez, onde o toque se torna um ninho lateral e sentado.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Com que frequência posso regressar?</h4>
-                    <p>Não há regras para a necessidade de equilíbrio. Há quem precise de uma vez por semana, há quem sinta que o corpo pede este regresso a cada dois dias. O corpo sabe a sua sede.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="historia" class="section-full-height" style="background-image: url('assets/hero.png'); background-attachment: fixed; background-size: cover; background-position: center;">
-        <div class="section-overlay">
-            <div class="container">
-                <div class="history-content reveal">
-                    <h2>De onde vêm os silêncios</h2>
-                    <p>Há raízes que atravessam dois milénios para nos tocarem hoje. Das mãos de Shivago ao calor da terra tailandesa, esta arte é uma biblioteca de gestos que sobreviveu ao esquecimento. Não seguimos a regra; seguimos a verdade que o corpo sussurra.</p>
-                    <a href="contato/index.html" class="btn-gold">Aprofundar a Leitura</a>
+                <div class="form-container" style="background-color: var(--accent);">
+                    <form id="form-digital">
+                        <div class="form-group">
+                            <label>Nome / Projecto</label>
+                            <input type="text" placeholder="Nome ou área terapêutica">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="email@exemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Em que fase está?</label>
+                            <select style="width: 100%; padding: 0.8rem; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); background: transparent; color: white; font-family: inherit;">
+                                <option style="color: black;">Ainda é apenas uma ideia</option>
+                                <option style="color: black;">Já tenho um projecto/site, mas quero mudar</option>
+                                <option style="color: black;">Preciso de consultoria estratégica</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Visão / Desafio</label>
+                            <textarea rows="3" placeholder="O que gostaria de transformar na sua presença online?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">agendar agora</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -201,34 +145,29 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-info">
-                    <div class="logo">TYM<span>.</span></div>
-                    <p>Promovendo o equilíbrio entre corpo, mente e espírito através da arte sagrada do toque.</p>
+                <div>
+                    <h4 class="logo" style="color: white; margin-bottom: 1rem;">Joana Clarinha<span>.</span></h4>
+                    <p>Entre o corpo e o ecrã, crio espaços de presença e clareza.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegação</h4>
                     <ul>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#beneficios">Benefícios</a></li>
-                        <li><a href="#para-quem">Público</a></li>
+                        <li><a href="#sobre">Sobre mim</a></li>
+                        <li><a href="#corpo">Tratamentos</a></li>
+                        <li><a href="#digital">Websites</a></li>
                     </ul>
                 </div>
-                <div class="footer-cta">
-                    <h4>Presença Real</h4>
-                    <p>Fiel à minha essência, prefiro o contacto direto do que a distração das redes sociais.</p>
-                    <p>Envia-me um e-mail para agendarmos.</p>
-                    <form class="subscribe-form">
-                        <input type="email" placeholder="O teu e-mail">
-                        <button type="submit">→</button>
-                    </form>
+                <div>
+                    <h4>Contacto Direto</h4>
+                    <p>Lisboa & Arredores / Digital</p>
+                    <p>joana@exemplo.com</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Thai Yoga Massage Hub. Criado com intenção.</p>
-            </div>
+            <p style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">&copy; 2024 Joana. Criado com intenção.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
