@@ -162,6 +162,35 @@ h1, h2, h3 {
     padding: 0 2rem;
 }
 
+/* Gallery Intro */
+.gallery-intro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 120px 20px 40px 20px;
+}
+
+.gallery-intro img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+    filter: brightness(0.95);
+}
+
+.gallery-intro img:hover {
+    filter: brightness(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery-intro {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 80px 10px 20px 10px;
+    }
+    .gallery-intro img {
+        height: 30vh;
+    }
+}
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
@@ -269,6 +298,34 @@ h2 {
     filter: grayscale(0);
 }
 
+.subtle-visual {
+    filter: saturate(0.5) contrast(0.85) brightness(1.02) blur(0.8px);
+    opacity: 0.55;
+    object-fit: cover;
+    object-position: 50% 45%; /* Highlighting the central 'Timeless' / 'To be with' area */
+    height: 450px;
+    width: 100%;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: block;
+}
+
+.subtle-visual:hover {
+    filter: saturate(0.8) contrast(1) brightness(1) blur(0);
+    opacity: 0.85;
+}
+
+.section-image.editorial {
+    padding: 3rem; /* Generous padding for a premium layout */
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image.editorial img {
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.03);
+}
+
 /* Personal Intro (Relational) */
 .relational-intro {
     background-color: rgba(249, 246, 240, 0.6); /* Soft semi-transparent sand */
@@ -351,6 +408,20 @@ h2 {
     border-color: var(--secondary);
 }
 
+.contact-box-content {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.condensed-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.condensed-form button {
+    margin-top: 1rem;
+}
+
 /* Footer */
 .footer {
     background: var(--bg-dark);
@@ -416,4 +487,47 @@ h2 {
     .form-container {
         padding: 3rem 2rem;
     }
+}
+
+/* Narrative & FAQ Styles */
+.narrative-container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+}
+
+.narrative-container p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.narrative-container em {
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.quote-section {
+    background-color: var(--primary);
+    color: white;
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.quote-section h2 {
+    font-style: italic;
+    font-size: 2.2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
